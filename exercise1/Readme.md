@@ -5,7 +5,7 @@ Exercise1 runs on Reactjs with dependencies on nextjs and expressjs for server s
 To run a local development copy of frontend-assessment make a local clone of [https://github.com/ebuyco/frontend-assessment/](https://github.com/ebuyco/frontend-assessment/) then...
 
 # Installation Instructions
-In the repo on the exercises1 and Exercise2 folder . To start the application, all you need to do is run the following commands on your terminal copy then paste.
+In the repo on the exercise1 folder . To start the application, all you need to do is run the following commands on your terminal copy then paste.
 
 ```
 npm install 
@@ -29,5 +29,3 @@ The bulk of the source is written in a series of interdependent ES6 modules divi
 * **pages** _include all pages content on the components folder by using import from react to used all components_
 * **components** _The main contents and layouts was put on these folder like styles and html and jsx on these folder also included the sass components._
 * **static** _The images and fonts was include on this folder ._
-
-### Note Bonus folder only have no packages because of the requirements based on instructions, but i included sample and explanation based on the instruction i forked from your repository
