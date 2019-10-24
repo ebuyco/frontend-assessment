@@ -5,10 +5,9 @@ const Content = () => (
   <Fragment>
       <div className={css.wrapper}>
             <div className={css.wrapper__header}>
-            {/* <img className ="wrapper--image" src="http://via.placeholder.com/1920x650" alt="wrapper-img"/> */}
-                <div className={css.wrapper__text}>
+                  <div className={css.wrapper__text}>
                       <h1 className={css.font__h1}>Hello Developer!</h1>
-                      <h3>Lorem ipsum dolor sit amet, consectetur adepcising elit</h3>
+                      <h3 className={css.font__h3}>Lorem ipsum dolor sit amet, consectetur adepcising elit</h3>
                 </div>
 
             </div>

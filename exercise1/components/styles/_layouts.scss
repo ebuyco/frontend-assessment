@@ -15,8 +15,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        min-width: 100vw;
-        min-height: 60vh;
+        max-width: 100vw;
+        min-height: 40vh;
         margin-bottom: 3rem ;
         > img.wrapper__image {
           position: relative;
@@ -30,10 +30,10 @@
           width: 100%;
 
            .font__h1{
-             font-size: 4rem;
+             font-size: 5rem;
              color:$titanium
            }
-           .text__card{
+           .font__h3{
             color:$titanium
           }
 
@@ -50,7 +50,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         justify-content:center;
         margin: 0 auto;
-        max-width: 80%;
+        max-width: 60%;
         .boxes{
             text-align: center;
             width: 100%;
@@ -65,14 +65,14 @@
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
               box-sizing: border-box;
-              padding: 2rem;
+              padding: 1.5rem;
 
                 .box__image{
                   width: 100%;
                   height: 100%;
                   width: 100%;
                   height: 100%;
-                  max-width: 40vw;
+                  max-width: 80vw;
                   max-height: 300vh;
                   border-radius: 0.4rem;
                   margin-bottom: 2rem;
