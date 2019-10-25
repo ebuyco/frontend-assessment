@@ -10,32 +10,21 @@
 
 
   .tabs{
-    a{
-      display: inline-flex;
-      padding: 2rem;
+    .tab__wrapper{
+      display: flex;
       justify-content: center;
       align-items: center;
-      cursor: pointer;
-      .tab{
-        margin-top: 10px;
-        color: rgba(0,0,0,0.6);
-        display: inline-block;
-        padding: 10px;
-        border-bottom: 2px solid rgba(0,0,0,0.2);
-        border-radius: 10px 10px 0 0;
+      a {
+        display: inline-flex;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
         cursor: pointer;
-        &:hover, &.active{
-          border-bottom:2px solid #337ab7;
-          color:#444;
-        }
 
-      }
-      .active{
-        border-bottom: 1rem solid blue;
       }
 
     }
-    .content{
+   .content{
       padding: 20px;
       color: rgba(0,0,0,0.6);
       background: rgba(255,255,255,0.2);
@@ -47,3 +36,6 @@
 
 
 }
+
+
+

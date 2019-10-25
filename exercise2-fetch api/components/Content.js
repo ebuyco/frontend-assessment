@@ -23,7 +23,7 @@ class Tabs extends Component {
     return React.Children.map(this.props.children, (item, i) => {
       if (i%2 === 0) {
         let active = this.state.active === i ? 'active' : '';
-        return <a onClick={this.select(i)} className={`${active} tab`}>{item}</a>;
+        return <a onClick={this.select(i)} className={`tab ${active}`}>{item}</a>;
       }
     });
   }
@@ -41,7 +41,9 @@ class Tabs extends Component {
   render() {
     return (
       <div className={css.tabs}>
+        <div className={css.tab__wrapper}>
         {this.renderTabs()}
+        </div>
         {this.renderContent()}
       </div>
     );
@@ -55,7 +57,6 @@ class Content extends Component {
      return (
      <React.Fragment>
         <div className={css.wrapper}>
-        <main>
         <Tabs>
           One
           <span>
@@ -68,7 +69,7 @@ class Content extends Component {
           Four
           <span><Disk/></span>
         </Tabs>
-        </main>
+
         </div>
      </React.Fragment>
     );
