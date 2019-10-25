@@ -1,12 +1,12 @@
 @import './variables';
 
-.wrapper {
+.wrapper__desktop{
   height: 100%;
   border-radius:3px;
   border: 1px solid #e5e5e5;
   margin:15px;
   background-color:white;
-
+  display: flex;
 }
 
 .tab__wrapper{
@@ -50,3 +50,6 @@
   padding: 2rem;
 }
 
+.wrapper__mobile{
+  display: none;
+}

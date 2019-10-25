@@ -25,7 +25,9 @@ class Tabs extends Component {
     return React.Children.map(this.props.children, (item, i) => {
       if (i%2 === 0) {
         let active = this.state.active === i ? 'active' : '';
-        return <a onClick={this.select(i)} className={`tab ${active}`}>{item}</a>;
+        return (
+          <a onClick={this.select(i)} className={`tab ${active}`}>{item}</a>
+        );
       }
     });
   }
@@ -33,9 +35,12 @@ class Tabs extends Component {
   renderContent() {
     return React.Children.map(this.props.children, (item, i) => {
       if (i-1 === this.state.active) {
-        const open = this.state.active ? 'open' : 'closed';
+        let attachedClasses= [this.state.active ? 'Closed' : 'Closed'];
+        if (this.state.open) {
+          attachedClasses = [this.state.Open ? 'Open' : 'Open'];
+        }
         return <div className={css.content}>
-          <div className={`${open}`}>
+          <div className={attachedClasses.join(' ')}>
                {item}
           </div>
 
@@ -64,7 +69,7 @@ class Content extends Component {
   render() {
      return (
      <React.Fragment>
-        <div className={css.wrapper}>
+        <div className={css.wrapper__desktop}>
             <Tabs>
               One
               <span>
@@ -77,6 +82,33 @@ class Content extends Component {
               Four
               <span><Disk/></span>
             </Tabs>
+       </div>
+       <div className={css.wrapper__mobile}>
+            <Tabs>
+              One
+              <div>
+               <Disk/>
+              </div>
+            </Tabs>
+            <Tabs>
+              Two
+              <div>
+               <Disk/>
+              </div>
+            </Tabs>
+            <Tabs>
+              Three
+              <div>
+               <Disk/>
+              </div>
+            </Tabs>
+            <Tabs>
+              Four
+              <div>
+               <Disk/>
+              </div>
+            </Tabs>
+
        </div>
      </React.Fragment>
     );
