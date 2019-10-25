@@ -20,4 +20,8 @@
     }
   }
 
-
+  a.tab.active {
+    border-bottom:2px solid #337ab7 !important;
+    color:#444;
+    cursor: pointer;
+  }

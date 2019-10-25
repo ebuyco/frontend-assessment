@@ -7,6 +7,7 @@ class Tabs extends Component {
     super();
     this.state = {
       active: 0
+
     }
   }
 
@@ -18,6 +19,7 @@ class Tabs extends Component {
       });
     }
   }
+
 
   renderTabs = () => {
     return React.Children.map(this.props.children, (item, i) => {
@@ -31,7 +33,13 @@ class Tabs extends Component {
   renderContent() {
     return React.Children.map(this.props.children, (item, i) => {
       if (i-1 === this.state.active) {
-        return <div className={css.content}>{item}</div>;
+        const open = this.state.active ? 'open' : 'closed';
+        return <div className={css.content}>
+          <div className={`${open}`}>
+               {item}
+          </div>
+
+        </div>;
       } else {
         return;
       }
