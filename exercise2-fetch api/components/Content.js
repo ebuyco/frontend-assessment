@@ -57,20 +57,19 @@ class Content extends Component {
      return (
      <React.Fragment>
         <div className={css.wrapper}>
-        <Tabs>
-          One
-          <span>
-              <Disk/>
-          </span>
-          Two
-          <span><Disk/></span>
-          Three
-          <span><Disk/></span>
-          Four
-          <span><Disk/></span>
-        </Tabs>
-
-        </div>
+            <Tabs>
+              One
+              <span>
+                  <Disk/>
+              </span>
+              Two
+              <span><Disk/></span>
+              Three
+              <span><Disk/></span>
+              Four
+              <span><Disk/></span>
+            </Tabs>
+       </div>
      </React.Fragment>
     );
   }
