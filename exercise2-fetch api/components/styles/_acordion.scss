@@ -1,19 +1,7 @@
-@media(max-width: 984px){
-.wrapper__mobile {
-  border: transparent;
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-gap:2rem;
-
-  .accordion__wrapper{
-    width:80%;
-    margin: 0 auto;
-  }
 
 .accordion__section {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 .accordion {
@@ -37,14 +25,8 @@
 
 .accordion__title {
   font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    text-align: center;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 /* Style the accordion chevron icon */
@@ -72,14 +54,3 @@
   font-size: 14px;
   padding: 18px;
 }
-
-
-    }
-
-
-
-    .wrapper__desktop {
-        display:none
-    }
-  }
-

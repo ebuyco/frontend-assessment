@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import css from '../components/styles/index.scss';
 import Disk from '../components/Disk';
-
+import Accordion from '../components/Accordion';
 class Tabs extends Component {
   constructor(props) {
     super();
@@ -35,9 +35,9 @@ class Tabs extends Component {
   renderContent() {
     return React.Children.map(this.props.children, (item, i) => {
       if (i-1 === this.state.active) {
-        let attachedClasses= [this.state.active ? 'Closed' : 'Closed'];
-        if (this.state.open) {
-          attachedClasses = [this.state.Open ? 'Open' : 'Open'];
+        let attachedClasses= [this.state.active ? 'Open' : ''];
+        if (this.state.closed) {
+          attachedClasses = [this.state.Open ? 'Closed' : ''];
         }
         return <div className={css.content}>
           <div className={attachedClasses.join(' ')}>
@@ -84,31 +84,7 @@ class Content extends Component {
             </Tabs>
        </div>
        <div className={css.wrapper__mobile}>
-            <Tabs>
-              One
-              <div>
-               <Disk/>
-              </div>
-            </Tabs>
-            <Tabs>
-              Two
-              <div>
-               <Disk/>
-              </div>
-            </Tabs>
-            <Tabs>
-              Three
-              <div>
-               <Disk/>
-              </div>
-            </Tabs>
-            <Tabs>
-              Four
-              <div>
-               <Disk/>
-              </div>
-            </Tabs>
-
+           <Accordion/>
        </div>
      </React.Fragment>
     );
