@@ -63,6 +63,12 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.2.0",
     "lint-staged": "^9.4.2",
+    "postcss": "^7.0.20",
+    "postcss-browser-reporter": "^0.6.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-reporter": "^6.0.1",
+    "postcss-url": "^8.0.0",
     "sass-loader": "^8.0.0",
     "stylelint-scss": "^3.12.0",
     "stylint": "^2.0.0"
@@ -78,5 +84,4 @@
       "git add"
     ]
   }
-
 }

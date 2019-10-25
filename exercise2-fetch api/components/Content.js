@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import css from '../components/styles/index.scss';
-import Disk from '../components/Disk';
 import Accordion from '../components/Accordion';
+import Disk from '../components/Disk';
 class Tabs extends Component {
   constructor(props) {
     super();
     this.state = {
       active: 0
-
     }
   }
 
@@ -26,7 +25,7 @@ class Tabs extends Component {
       if (i%2 === 0) {
         let active = this.state.active === i ? 'active' : '';
         return (
-          <a onClick={this.select(i)} className={`tab ${active}`}>{item}</a>
+          <a onClick={this.select(i)} className={`tab__element ${active}`}>{item}</a>
         );
       }
     });
@@ -70,18 +69,18 @@ class Content extends Component {
      return (
      <React.Fragment>
         <div className={css.wrapper__desktop}>
-            <Tabs>
+        <Tabs>
               One
               <span>
-                  <Disk/>
-              </span>
+                <Disk/>
+               </span>
               Two
-              <span><Disk/></span>
+            <span><Disk/></span>
               Three
-              <span><Disk/></span>
+             <span><Disk/></span>
               Four
-              <span><Disk/></span>
-            </Tabs>
+             <span><Disk/></span>
+          </Tabs>
        </div>
        <div className={css.wrapper__mobile}>
            <Accordion/>

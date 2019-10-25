@@ -9,31 +9,27 @@
   display: flex;
 }
 
-.tab__wrapper{
+.tab__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-   a {
+
+  a {
     display: inline-flex;
     padding: 2rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-     .tab{
-          >.active{
-            border-bottom:2px solid #337ab7;
-            color:#444;
-            cursor: pointer;
-          }
-         & :active{
-            border-bottom:2px solid #337ab7;
-            color:#444;
-            cursor: pointer;
-         }
-       }
+    > .tab__element{
+      background: red;
+     > .active{
+        border-bottom:2px solid #337ab7;
+        color:#444;
+        cursor: pointer;
+        }
     }
 
-
+  }
 
 }
 
