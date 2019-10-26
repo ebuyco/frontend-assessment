@@ -8,7 +8,7 @@
     "start": "next start",
     "serve": "node server.js",
     "heroku-build": "next build",
-    "lint:css": "stylelint './components/styles/**/*.js'",
+    "lint:css": "stylelint './components/styles/**/*.scss'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

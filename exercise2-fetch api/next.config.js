@@ -1,12 +1,13 @@
 // next.config.js
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
+
 module.exports = withCSS(withSass({
   cssModules: true,
   parser: true,
   cssLoaderOptions: {
     importLoaders: 1,
-    localIdentName: "[local]___[hash:base64:5]",
+    localIdentName: '[local]___[hash:base64:5]',
   },
   config: {
     ctx: {
@@ -17,20 +18,19 @@ module.exports = withCSS(withSass({
     autoPrerender: true,
   },
 
-  webpack (config, options) {
+  webpack(config, options) {
     config.module.rules.push(
       {
-      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-      use: {
-        loader: 'url-loader',
-        options: {
-          limit: 100000
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 100000
+          }
         }
-      }
-    },
+      },
 
-    )
-    return config
+    );
+    return config;
   }
-}))
-
+}));

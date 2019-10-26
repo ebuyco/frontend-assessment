@@ -3,11 +3,11 @@ import Layout from '../components/Layout';
 import '../components/styles/index.scss';
 import Content from '../components/Content';
 
-
 const Home = () => (
   <Layout>
-   <Content/>
+    <Content />
   </Layout>
-)
+
+);
 
 export default Home;
