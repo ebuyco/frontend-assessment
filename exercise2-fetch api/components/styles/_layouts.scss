@@ -3,10 +3,11 @@
 .wrapper__desktop{
   height: 100%;
   border-radius:3px;
-  border: 1px solid #e5e5e5;
+  border: 2px solid $charcoal;
   margin:15px;
   background-color:white;
   display: flex;
+  padding: 2rem;
 }
 
 .tab__wrapper {
@@ -20,13 +21,19 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &:active, &:hover,&:focus{
+     border-bottom: 3px solid $yellow;
+     background-color:$green;
+     color: $titanium;
+  }
     > .tab__element{
       background: red;
+
      > .active{
         border-bottom:2px solid #337ab7;
         color:#444;
         cursor: pointer;
-        }
+       }
     }
 
   }
