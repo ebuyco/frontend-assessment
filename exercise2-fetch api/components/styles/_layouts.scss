@@ -8,40 +8,50 @@
   background-color:white;
   display: flex;
   padding: 2rem;
+  justify-content: center;
 }
 
 .tab__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  width:100%;
+  background-color: $charcoal;
+  color: $titanium;
 
   a {
-    display: inline-flex;
+    display: flex;
     padding: 2rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    &:active, &:hover,&:focus{
-     border-bottom: 3px solid $yellow;
+    border-left: 1px solid $ghost;
+    &:active, &:hover,
+    &:focus,&:visited
+    &:focus-within{
+     border-bottom: 2px solid $yellow;
      background-color:$green;
      color: $titanium;
   }
-    > .tab__element{
-      background: red;
-
-     > .active{
-        border-bottom:2px solid #337ab7;
-        color:#444;
-        cursor: pointer;
-       }
-    }
-
-  }
+ }
 
 }
 
 
+.tab__element{
+  background: red;
+ .active{
+    border-bottom: 2px solid #337ab7;
+    color:#444;
+    cursor: pointer;
+   }
+}
 
+.tab__element.active {
+  cursor: pointer;
+  border-bottom: 2px solid #337ab7;
+  color:#444;
+}
 
 .content{
   padding: 20px;
