@@ -2,12 +2,13 @@
   .wrapper {
        .wrapper__header{
           background-image: url("http://via.placeholder.com/600x800");
-          min-height: 40vh;
+          min-height: 60vh;
           margin-bottom: 3rem ;
 
           .wrapper__text {
+
              .font__h1{
-               font-size: 5rem;
+               font-size: 6rem;
 
              }
              .font__h3{
@@ -58,7 +59,7 @@
 @media(max-width: 850px){
   .wrapper {
        .wrapper__header{
-          min-height: 30vh;
+          min-height: 40vh;
           margin-bottom: 3rem ;
 
           .wrapper__text {
@@ -107,19 +108,16 @@
 
 @media(max-width: 690px){
   .wrapper {
-       .wrapper__header{
-            .wrapper__text {
-            .font__h1{
-              font-size: 5rem;
+    .wrapper__text {
+      .font__h1{
+        font-size: 3rem;
 
-            }
-            .font__h3{
-               font-size: 2rem;
-            }
+      }
+      .font__h3{
+         font-size: 2rem;
+      }
 
-         }
-
-        }
+   }
 
         .box__wrapper{
           grid-auto-flow: row;
@@ -157,4 +155,54 @@
   }
 
   }
+
+  @media(max-width: 480px){
+    .wrapper {
+      .wrapper__text {
+        .font__h1{
+          font-size: 2rem;
+
+        }
+        .font__h3{
+           font-size: 1rem;
+        }
+
+     }
+
+
+      }
+
+    }
+
+    @media(max-width: 458px){
+      .wrapper {
+        .wrapper__text {
+           .font__h3{
+             font-size: 0.7777rem;
+          }
+
+       }
+
+
+        }
+
+      }
+
+      @media(max-width: 414px){
+        .wrapper {
+          .wrapper__text {
+             .font__h3{
+               font-size: 0.4rem;
+            }
+
+         }
+
+
+          }
+
+        }
+
+
+
+
 
