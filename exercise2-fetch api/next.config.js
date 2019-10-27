@@ -18,7 +18,7 @@ module.exports = withCSS(withSass({
     autoPrerender: true,
   },
 
-  webpack(config, options) {
+  webpack(config) {
     config.module.rules.push(
       {
         test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,

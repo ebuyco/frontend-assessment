@@ -1,5 +1,4 @@
-// cachable setting ssr
-// const cacheableResponse = require('cacheable-response');
+const cacheableResponse = require('cacheable-response');
 const express = require('express')
 const next = require('next')
 
@@ -9,18 +8,18 @@ const app = next({ dev })
 
 const handle = app.getRequestHandler()
 
-// const ssrCache = cacheableResponse({
-//   ttl: 1 * 60 * 60,
-//   get: async ({ req, res, pagePath, queryParams }) => ({
-//     data: await app.renderToHTML(req, res, pagePath, queryParams)
-//   }),
-//   send: ({ data, res }) => res.send(data)
-// })
+const ssrCache = cacheableResponse({
+  ttl: 1 * 60 * 60,
+  get: async ({ req, res, pagePath, queryParams }) => ({
+    data: await app.renderToHTML(req, res, pagePath, queryParams)
+  }),
+  send: ({ data, res }) => res.send(data)
+})
 
 app.prepare().then(() => {
   const server = express()
 
-  // server.get('/', (req, res) => ssrCache({ req, res, pagePath: '/' }))
+  server.get('/', (req, res) => ssrCache({ req, res, pagePath: '/' }))
 
   server.get('/home:id', (req, res) => {
     const queryParams = { id: req.params.id }

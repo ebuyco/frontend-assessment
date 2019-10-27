@@ -25,7 +25,7 @@ const Disk = () => {
     axios.get('https://raw.githubusercontent.com/mindarc/frontend-assessment/master/data.json')
       .then(
         (response) => {
-          setFetchState({
+         setFetchState({
             isLoaded: true,
             items: response.data
           });
@@ -38,7 +38,6 @@ const Disk = () => {
         }
       );
   }, []);
-
 
   const Output = () => {
     if (error) {
@@ -61,5 +60,7 @@ const Disk = () => {
 
   return Output();
 };
+
+
 
 export default Disk;

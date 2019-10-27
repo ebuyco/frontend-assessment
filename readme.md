@@ -16,8 +16,15 @@ yarn install
 Although to make the process easier, you can simply run the app on your terminal and listen to the port 8081:
 
 ```
-npm start or yarn start 
- dev or yarn dev
+npm start or yarn start
+npm dev or yarn dev
+```
+
+### I have also setup a cachebale response on the server using express 
+The app will listen on port 4000 just run the commands on the terminal
+
+```
+yarn serve or npm serve
 ```
 
 ## Application structure
