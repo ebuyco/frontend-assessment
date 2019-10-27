@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 const axios = require('axios');
+import Spinner from '../components/Spinner';
 
 const TitleArea = (props) => {
   return (
@@ -12,12 +13,12 @@ const TitleArea = (props) => {
 }
 
 const Disk = () => {
-  const initialLocalState = {
+  const preLoadedState = {
     error: null,
     isLoaded: false,
     items: []
   };
-  const [fetchArray, setFetchState] = useState(initialLocalState);
+  const [fetchArray, setFetchState] = useState(preLoadedState);
   const { error, isLoaded, items } = fetchArray;
 
 
@@ -45,7 +46,7 @@ const Disk = () => {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <p>Loading...</p>;
+      return <Spinner/>
     } else {
       return (
           <React.Fragment>

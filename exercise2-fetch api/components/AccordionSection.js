@@ -13,8 +13,8 @@ export const AccordionSection = ({ children, title, index }) => {
     onNavigation,
     id
   } = useAccordionContext();
-  const sectionId = `${id}-${index}-section`;
-  const labelId = `${id}-${index}-label`;
+  // const sectionId = `${id}-${index}-section`;
+  // const labelId = `${id}-${index}-label`;
   const expanded = expandedAll[index];
   const labelRef = useRef();
   useEffect(() => {
@@ -28,8 +28,8 @@ export const AccordionSection = ({ children, title, index }) => {
       <div
         role='button'
         aria-expanded={expanded}
-        aria-controls={sectionId}
-        id={labelId}
+        // aria-controls={sectionId}
+        // id={labelId}
         className={css.accordion__section}
         tabIndex={0}
         onClick={() => onToggle && onToggle(index)}
@@ -72,8 +72,8 @@ export const AccordionSection = ({ children, title, index }) => {
       </div>
       <div
         role='region'
-        aria-labelledby={labelId}
-        id={sectionId}
+        // aria-labelledby={labelId}
+        // id={sectionId}
         hidden={!expanded}
         className={css.accordion__content}
       >
