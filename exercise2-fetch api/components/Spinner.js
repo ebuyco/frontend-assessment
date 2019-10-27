@@ -1,15 +1,15 @@
 import React from 'react';
-import css from '../components/styles/index.scss';
+import css from './styles/index.scss';
 
 
-const Spinner = ()=> (
-    <>
-        <div className={css.spinner__wrapper}>
+const Spinner = () => (
+  <>
+    <div className={css.spinner__wrapper}>
               ...Loading
-        </div>
+    </div>
 
-    </>
-)
+  </>
+);
 
 
 export default Spinner;
